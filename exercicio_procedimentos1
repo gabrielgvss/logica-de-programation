@@ -1,0 +1,49 @@
+//autor: Gabriel Vinícius 
+//linguagem visualG
+
+algoritmo "cadastro"
+
+var
+nome,r1:caractere
+r,idade,qtdm,qtdmn,qtl:inteiro
+
+procedimento questionario()
+inicio
+limpatela
+escreval("--CADASTRO--")
+escreval("Digite seu nome: ")
+leia(nome)
+escreval("Digite sua idade: ")
+leia(idade)
+
+se (idade>=18) entao
+   qtdm<-qtdm+1
+senao
+   qtdmn<-qtdmn+1
+fimse
+
+escreval("Qual a cor do seu cabelo?")
+escreval("(1) LOIRO")
+escreval("(2) CASTANHO")
+escreval("(3) PRETO")
+escreval("(4) COLORIDO")
+escreval("(5) RUIVO")
+ESCREVAL("Sua resposta: ")
+leia(r)
+se (r=1) entao
+qtl <- qtl + 1
+fimse
+escreval("--------------")
+
+fimprocedimento
+
+inicio
+repita
+   questionario()
+   escreval("Deseja cadastrar mais individuos?(S/N)")
+   leia(r1)
+ate (r1="N")
+escreval("--------------------------------------------------")
+escreval("A quantidade de maiores de idade é igual a ",qtdm)
+escreval("A quantidade de menores de idade é igual a ",qtdmn)
+escreval("A quantidade de pessoas loiras é igual a ",qtl)
