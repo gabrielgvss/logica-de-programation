@@ -1,0 +1,17 @@
+//autor: Gabriel Vinícius
+//linguagem: Java
+public class Main {
+	
+	public static void main(String[] args) {
+		
+		String name = "Gabriel Vinícius";
+		int idade = 17;
+		String cidade = "São Luís, in Maranhão.";
+		
+		
+		System.out.println("Hello, world! My name is "+name+" and I am "+ idade +" years old. I live in "+cidade);
+		System.out.println("I´m doing my first steps in Java and I hope one day I become a great developer.");
+		
+	}
+
+}
