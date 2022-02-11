@@ -1,0 +1,45 @@
+//autor: Gabriel Vinícius
+//linguagem: visualg
+
+algoritmo "semnome"
+var
+mensage:caractere
+
+procedimento gerador(texto:caractere)
+var
+borda:inteiro
+
+inicio
+
+escreval("+-------=======------+ BORDA 1")
+ESCREVAL("~~~~~~~~:::::::~~~~~~~ BORDA 2")
+escreval("<<<<<<<<------->>>>>>> BORDA 3")
+repita
+   escreval("Digite o número da borda escolhida: ")
+   leia(borda)
+   escolha borda
+   CASO 1
+      escreval("+-------=======------+")
+      escreval(texto)
+      escreval("+-------=======------+")
+   CASO 2
+      escreval("~~~~~~~~:::::::~~~~~~~")
+      escreval(texto)
+      escreval("~~~~~~~~:::::::~~~~~~~")
+   CASO 3
+      escreval("<<<<<<<<------->>>>>>>")
+      escreval(texto)
+      escreval("<<<<<<<<------->>>>>>>")
+   OUTROCASO
+      escreval("----------------------------------------------")
+      escreval("Resposta inválida, favor escolher um número referente às bordas apresentadas")
+   fimescolha
+ate (borda = 1) ou (borda = 2) ou (borda = 3)
+fimprocedimento
+
+inicio
+escreval("Insira uma mensagem: ")
+leia(mensage)
+gerador(mensage)
+
+fimalgoritmo
