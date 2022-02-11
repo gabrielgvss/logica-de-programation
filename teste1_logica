@@ -1,0 +1,46 @@
+//autor: Gabriel Vinícius
+//linguagem: visualg
+
+algoritmo "semnome"
+var
+coduser,senha,r,r1:inteiro
+
+procedimento codigoinvalido(a:caractere)
+inicio
+escreval(a,"Por favor, tente novamente.")
+escreval("--------------------------------------------")
+fimprocedimento
+
+inicio
+repita
+   escreval("Digite seu código de usuário: ")
+   leia(coduser)
+   se (coduser<>0101) entao
+      codigoinvalido("CÓDIGO INVÁLIDO!")
+      escreval("Deseja tentar novamente? Digite (1) para SIM e (2) para encerrar o sistema")
+      leia(r)
+   fimse
+ate (coduser=0101) ou (r=2)
+se (r=2) entao
+      Limpatela
+      escreval("F I M")
+fimse
+se (coduser=0101) entao
+   repita
+      escreval("Digite sua senha: ")
+      leia(senha)
+      se (senha<>2000) entao
+         codigoinvalido("SENHA INVÁLIDA!")
+         escreval("Deseja tentar novamente? Digite (1) para SIM e (2) para encerrar o sistema")
+         leia(r1)
+      fimse
+   ate (senha=2000) ou (r1=2)
+   se (r1=2) entao
+      Limpatela
+      escreval("F I M")
+   senao
+      escreval("Bem vindo usuário 1001, seu acesso foi permitido!")
+   fimse
+fimse
+
+fimalgoritmo
