@@ -1,0 +1,39 @@
+//autor: Gabriel Vinícius
+//linguagem: visualg
+
+algoritmo "semnome"
+var
+num:inteiro
+r:caractere
+
+procedimento Fibonacci(var qtd:inteiro)
+var n1,n2,n3,c:inteiro
+inicio
+n1<-0
+n2<-1
+escreva(n1," >>",n2)
+para c<-1 ate (qtd-2) faca
+n3<-n1+n2
+escreva(" >>",n3)
+n1<-n2
+n2<-n3
+fimpara
+escreval("              ")
+escreval("--------------")
+fimprocedimento
+
+inicio
+repita
+escreval("Informe até qual digito deverá ser contada a sequência de Fibonacci: ")
+leia(num)
+escreval("--------------")
+Fibonacci(num)
+escreval("Deseja tentar com outro digito?")
+escreval("Sua resposta: ")
+leia(r)
+limpatela
+ate (r="N") ou (r="n")
+limpatela
+escreval("F I M")
+
+fimalgoritmo
